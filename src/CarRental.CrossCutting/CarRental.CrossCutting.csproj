@@ -5,7 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DependencyInjection\" />
+    <ProjectReference Include="..\CarRental.Repository\CarRental.Repository.csproj" />
+    <ProjectReference Include="..\CarRental.Service\CarRental.Service.csproj" />
   </ItemGroup>
-
+  
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
 </Project>

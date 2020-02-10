@@ -1,0 +1,7 @@
+C:\Users\raelu\Desktop\CarRental\src\CarRental.Domain\bin\Debug\netstandard2.0\CarRental.Domain.deps.json
+C:\Users\raelu\Desktop\CarRental\src\CarRental.Domain\bin\Debug\netstandard2.0\CarRental.Domain.dll
+C:\Users\raelu\Desktop\CarRental\src\CarRental.Domain\bin\Debug\netstandard2.0\CarRental.Domain.pdb
+C:\Users\raelu\Desktop\CarRental\src\CarRental.Domain\obj\Debug\netstandard2.0\CarRental.Domain.AssemblyInfoInputs.cache
+C:\Users\raelu\Desktop\CarRental\src\CarRental.Domain\obj\Debug\netstandard2.0\CarRental.Domain.AssemblyInfo.cs
+C:\Users\raelu\Desktop\CarRental\src\CarRental.Domain\obj\Debug\netstandard2.0\CarRental.Domain.dll
+C:\Users\raelu\Desktop\CarRental\src\CarRental.Domain\obj\Debug\netstandard2.0\CarRental.Domain.pdb

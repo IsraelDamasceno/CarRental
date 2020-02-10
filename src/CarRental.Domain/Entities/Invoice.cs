@@ -7,9 +7,21 @@
             BasicPayment = basicPayment;
             Tax = tax;
         }
+        private double _basicPayment;
 
-        public double BasicPayment { get; private set; }
-        public double Tax { get; private set; }
+        public double BasicPayment
+        {
+            get { return _basicPayment; }
+            set { _basicPayment = value; }
+        }
+
+        private double   _tax;
+
+        public double  Tax
+        {
+            get { return _tax; }
+            set { _tax = value; }
+        }
 
         public double TotalPayment
         {

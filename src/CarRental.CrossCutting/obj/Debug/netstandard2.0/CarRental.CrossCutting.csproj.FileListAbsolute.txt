@@ -1,0 +1,15 @@
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\bin\Debug\netstandard2.0\CarRental.CrossCutting.deps.json
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\bin\Debug\netstandard2.0\CarRental.CrossCutting.dll
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\bin\Debug\netstandard2.0\CarRental.CrossCutting.pdb
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\bin\Debug\netstandard2.0\CarRental.Domain.dll
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\bin\Debug\netstandard2.0\CarRental.Repository.dll
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\bin\Debug\netstandard2.0\CarRental.Service.dll
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\bin\Debug\netstandard2.0\CarRental.Repository.pdb
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\bin\Debug\netstandard2.0\CarRental.Service.pdb
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\bin\Debug\netstandard2.0\CarRental.Domain.pdb
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\obj\Debug\netstandard2.0\CarRental.CrossCutting.csprojAssemblyReference.cache
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\obj\Debug\netstandard2.0\CarRental.CrossCutting.AssemblyInfoInputs.cache
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\obj\Debug\netstandard2.0\CarRental.CrossCutting.AssemblyInfo.cs
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\obj\Debug\netstandard2.0\CarRental.CrossCutting.csproj.CopyComplete
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\obj\Debug\netstandard2.0\CarRental.CrossCutting.dll
+C:\Users\raelu\Desktop\CarRental\src\CarRental.CrossCutting\obj\Debug\netstandard2.0\CarRental.CrossCutting.pdb
