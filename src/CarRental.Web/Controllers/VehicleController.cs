@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CarRental.Domain.Entities;
+﻿using CarRental.Domain.Entities;
 using CarRental.Domain.Interfaces;
-using CarRental.Repository.Repositories;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
 
 namespace CarRental.Web.Controllers
 {
@@ -14,25 +9,67 @@ namespace CarRental.Web.Controllers
     [ApiController]
     public class VehicleController : ControllerBase
     {
-        private readonly IVehicle _vehicle;
-        public VehicleController(IVehicle vehicle)
+        private readonly IVehicleRepository _vehicles;
+        public VehicleController(IVehicleRepository vehicles)
         {
-            _vehicle = vehicle;
+            _vehicles = vehicles;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vehicle>>> Get()
+        public ActionResult<List<Vehicle>> Get()
         {
-            var vehicle = await _vehicle.SelectAsync();
-            return Ok(vehicle);
+            return _vehicles.Get();
+        }
+      
+        [HttpGet("{id:length(24)}", Name = "GetVehicle")]
+        public ActionResult<Vehicle> Get(string id)
+        {
+            var vehicle = _vehicles.Get(id);
+
+            if (vehicle == null)
+            {
+                return NotFound();
+            }
+            return vehicle;
         }
 
         [HttpPost]
-        public async Task<ActionResult<Vehicle>> Post([FromBody] Vehicle vehicle )
+        public ActionResult<Vehicle> Create(Vehicle vehicle)
         {
-            var newvehicle = new Vehicle(vehicle.Model, vehicle.PriceDay, vehicle.PriceHour);
-            await _vehicle.InsertAsync(newvehicle);
-            return vehicle;
+            _vehicles.Create(vehicle);
+
+            return CreatedAtRoute("GetVehicle", new { id = vehicle.Id.ToString() }, vehicle);
         }
+
+        [HttpPut("{id:length(24)}")]
+        public IActionResult Update(string id, Vehicle vehicle)
+        {
+            var oneVehicle = _vehicles.Get(id);
+
+            if (oneVehicle == null)
+            {
+                return NotFound();
+            }
+
+            _vehicles.Update(id, vehicle);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id:length(24)}")]
+        public IActionResult Delete(string id)
+        {
+            var vehicle = _vehicles.Get(id);
+
+            if (vehicle == null)
+            {
+                return NotFound();
+            }
+
+            _vehicles.Remove(vehicle.Id);
+
+            return NoContent();
+        }
+
     }
 }

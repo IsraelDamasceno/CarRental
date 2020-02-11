@@ -1,9 +1,4 @@
 using CarRental.CrossCutting.DependencyInjection;
-using CarRental.Domain.Interfaces;
-using CarRental.Repository.Context;
-using CarRental.Repository.Interfaces;
-using CarRental.Repository.Persistence;
-using CarRental.Repository.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,13 +19,10 @@ namespace CarRental.Web
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            MongoDbPersistence.Configure();
-            services.AddControllers();
-            services.AddScoped<IMongoContext, MongoContext>();
-            services.AddScoped<IVehicle, VehicleRepository>();
+            services.AddControllersWithViews();
+            services.AddMvc();
             ConfigureService.ConfigureDependenciesService(services);
         }
-
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -49,6 +41,7 @@ namespace CarRental.Web
             {
                 endpoints.MapControllers();
             });
+            
         }
     }
 }

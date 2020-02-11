@@ -22,7 +22,7 @@ namespace CarRental.Service.Services
             }
             else
             {
-                basicPayment = vehicle.PriceDay * Math.Ceiling(duration.TotalDays);
+                basicPayment = vehicle.PriceOfDay * Math.Ceiling(duration.TotalDays);
             }
 
             double tax = _taxService.Tax(basicPayment);

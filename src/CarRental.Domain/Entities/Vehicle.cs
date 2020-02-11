@@ -1,23 +1,27 @@
-﻿using System;
-using MongoDB.Bson;
+﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace CarRental.Domain.Entities
 {
     public class Vehicle
     {
-        public Vehicle(string model, Double priceDay, Double priceHour)
+
+        public Vehicle(string id, string model, double priceOfDay, double priceHour)
         {
-             
+            Id = id;
             Model = model;
-            PriceDay = priceDay;
+            PriceOfDay = priceOfDay;
             PriceHour = priceHour;
         }
+        [BsonId]
+        [BsonRepresentation(BsonType.ObjectId)]
+        public string Id { get; set; }
+
         [BsonElement("Model")]
         public string Model { get; private set; }
-        [BsonElement("PriceDay")]
-        public Double PriceDay { get; private set; }
         [BsonElement("PriceHour")]
-        public Double PriceHour { get; private set; }
+        public double PriceHour { get; private set; }
+        [BsonElement("PriceOfDay")]
+        public double PriceOfDay { get; private set; }
     }
 }
